@@ -3,7 +3,6 @@
 #include <string>
 #include <iostream>
 
-// Инициализация базы данных
 void initializeDatabase(sqlite3* &db) {
     const char* createTableQuery =
         "CREATE TABLE IF NOT EXISTS attendance ("
@@ -130,6 +129,7 @@ int main() {
     // Запуск сервера
     app.port(8080).multithreaded().run();
 
+    P.S THAT IS JUST PROTOTYPE I KNOW THAT CODE ISNT WORKING, I WILL 
     // Закрываем базу данных при завершении работы
     sqlite3_close(db);
 
